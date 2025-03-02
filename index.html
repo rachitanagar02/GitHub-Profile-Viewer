@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+    <style>
+    body,html{
+        margin: 0%;
+        padding: 0%;
+        height: 100%;
+    }
+    .container{
+        height: 100%;
+        background-color: rgb(217, 90, 217);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .box{
+        background-color: rgb(205, 137, 205);
+        padding: 85px 15px;
+        border-radius: 10px;
+        border: 0.01px solid #394050;
+        transition: transform 0.8s;
+    }
+    .box:hover{
+        transform: scale(1.04);
+    }
+    h2{
+        font-size: 28px;
+        color: black;
+    }
+    img{
+        height: 80px;
+        width: 80px;
+    }
+    input{
+        font-size: 20px;
+        color: #666d7b;
+        background-color: #090a0e;
+        height: 30px;
+        width: 340px;
+        border-radius: 5px;
+        border: 1px solid #6a707c;
+    }
+    input:hover{
+        transform: scale(1.01);
+        color: rgb(206, 213, 215);
+        background-color: #12131a;
+    }
+    button{
+        border-radius: 13px;
+        border: 1px solid rgb(143, 132, 243);
+        background-color: rgba(78, 83, 95, 0.916);
+        cursor: pointer;
+        font-size: 22px;
+        height: 32px;
+        width: 160px;
+    }
+    button:hover{
+        transform: scale(1.02); 
+        background-color: rgb(152, 76, 116);
+        border: 2px solid rgb(171, 194, 170);
+    }
+    a{
+        font-size: 22px;
+        color: rgb(120, 124, 129);
+    }
+    a:hover{
+        color: rgb(132, 123, 126);
+    }
+ </style>
+</head>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="img/image.png" height="25px"width="25px"><br>
+            <h2>Git-Hub <br>Profile Viewer</h2>
+            <input type="text" id="username" placeholder="Enter Username"><br><br>
+            <button onclick="search()">Search</button><br><br>
+            <a href="" id="ans"></a>
+        </div>
+    </div>
+    <script>
+        let username=document.getElementById("username");
+        let ans=document.getElementById("ans");
+        function search(){
+            ans.href="https://github.com/" + username.value;
+            document.getElementById("ans").innerHTML="View Profile"
+        }
+    </script>
+    
+</body>
+</html>
